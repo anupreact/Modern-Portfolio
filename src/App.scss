@@ -760,7 +760,6 @@ body {
         }
         .title {
           font-size: 1rem !important;
-          background: #000;
           text-align: center;
         }
       }
@@ -792,12 +791,17 @@ body {
 
   .about-card-wrapper {
     .left {
+      margin:2rem;
       .content {
         height: auto;
         .row {
-          width: 100%;
+          width: 90%;
         }
       }
+    }
+    .right{
+      margin:2rem;
+
     }
   }
   .projects_page_container {
