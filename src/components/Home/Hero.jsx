@@ -41,7 +41,7 @@ const Hero = () => {
           <div className="name">Hello My Name is </div> 
           <div className=" name-2">{name}</div>
           {/* <span className="title">ans I am a Web Developer{title}</span> */}
-          <br />
+         
           <div className="title">And I am a  
           <span style={{ color: '#f5b921', fontWeight: 'bold' }}>
           {/* Style will be inherited from the parent element */}  { ' '}
