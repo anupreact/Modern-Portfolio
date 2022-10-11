@@ -8,37 +8,20 @@ import sass from "../../images/sass.png";
 import mui from "../../images/mui.png";
 
 const AboutTech = () => {
-  // const techData = [
-  //   ' Expertise in React JS framework to develop Single Page Applications.',
-  //   'Experienced in React JS and working with React Flux & Redux architecture.',
-  //   'Experience in using React JS components, Forms, Events, Keys, Router, & Redux',
-  //   "Good Experience in React.js for creating interactive UI's using One-way data flow, Virtual DOM, JSX.",
-  //   'Expertise in using IDE tools like VS-code and Sublime Text.',
-  //   'Ability to work effectively while working as a team member as well as individually.',
-  //   'Excellent communication and Inter-Personal Skills, well organized, goal oriented.',
-  // ];
-
-  // Developing new user-facing features using React.js
-  // Building reusable components and front-end libraries for future use
-  // Translating designs and wireframes into high quality code
-  // Optimizing components for maximum performance across a vast array of web-capable devices and browsers
-  // Strong proficiency in JavaScript, including DOM manipulation and the JavaScript object model
-
-
-  // Thorough understanding of React.js and its core principles
-  // Ability to understand business requirements and translate them into technical requirements
-  // Familiarity with code versioning tools {{such as Github & bitBucket}}
-
-
+  const images = [`${html}`, `${css}`, `${js}`, `${react}`, `${sass}`, `${mui}`];
 
   const techData = [
-    "⚡ Creating the flow of application functionalities to optimize user experience.",
-    "⚡ Building resposive website front end using React-Redux.",
-    "⚡  Expertise in React JS framework to develop Single Page Applications.",
-    "⚡ Experienced in React JS and working with React Flux & Redux architecture.",
-    "⚡ Experience in using React JS components, Forms, Events, Keys, Router, & Redux",
-    "⚡ Good Experience in React.js for creating interactive UI's using One-way data flow, Virtual DOM, JSX.",
-    "⚡ Expertise in using IDE tools like VS-code and Sublime Text.",
+    "⚡ Building reusable components and front-end libraries for future use.",
+    "⚡ Translating designs and wireframes into high quality code.",
+    "⚡ Design and develop new custom components to meet project requirements.",
+    "⚡Optimizing components for maximum performance across a vast array of web-capable devices and browsers.",
+    "⚡Strong proficiency in JavaScript, including DOM manipulation, JavaScript object model & CSS preprocessors like SASS.",
+
+    "⚡ Ability to understand business requirements and translate them into technical requirements.",
+
+    "⚡Hands on Experience with React class and functional components, Forms, Events, Keys, Router, & Redux library.",
+    "⚡ Familiarity with code versioning tools {such as Github & bitBucket}.",
+    "⚡Familier with various React UI libraries like Material UI, antDesign, & React-bootstrap etc.",
   ];
 
   return (
@@ -48,36 +31,19 @@ const AboutTech = () => {
         <br /> <br />
       </div>
 
-     
       <div className="what">
         <div className="left-sec">
           <div className="tech-icons">
-            <h2 style={{color:"white"}}>Frontend Web-Development</h2>
+            <h2 style={{ color: "white" }}>Frontend Web-Development</h2>
             <div className="icons">
-              <span>
-                {" "}
-                <img src={html} alt="" />
-              </span>{" "}
-              <span>
-                {" "}
-                <img src={css} alt="" />
-              </span>{" "}
-              <span>
-                {" "}
-                <img src={js} alt="" />
-              </span>{" "}
-              <span>
-                {" "}
-                <img src={react} alt="" />
-              </span>{" "}
-              <span>
-                {" "}
-                <img src={mui} alt="" />
-              </span>{" "}
-              <span>
-                {" "}
-                <img src={sass} alt="" />
-              </span>
+              {images.map((image , index) => {
+                return (
+                  <span key={index}>
+                    <img src={image} alt="" />
+                  </span>
+                );
+              })}
+              
             </div>
           </div>
           <ul>

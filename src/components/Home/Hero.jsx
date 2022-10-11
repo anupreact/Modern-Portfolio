@@ -54,7 +54,7 @@ const Hero = () => {
                 words={["Frontend Web Developer", "React JS Developer"]}
                 loop={1}
                 cursor
-                cursorStyle="-"
+                cursorStyle="_"
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}

@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+a{
+  text-decoration: none;
+}
 .navbar {
   background-color: #0a3947;
   height: 80px;
@@ -40,6 +44,9 @@
   /* flex-grow: 1; */
   font-family: 'Great Vibes', cursive;
   text-transform: capitalize;
+}
+.nav-logo:hover{
+  color:rgb(192, 108, 140)
 }
 
 .nav-menu {
