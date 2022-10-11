@@ -1,23 +1,48 @@
-import React from 'react';
+import React from "react";
 
 const Contacts = (props) => {
+  // const icons = [
+  //   'fa fa-linkedin',
+  //   'fa fa-envelope',
+  //   'fa fa-github',
+  //   'fa fa-telegram',
+  // ];
+
   const icons = [
-    'fa fa-linkedin',
-    'fa fa-envelope',
-    'fa fa-github',
-    'fa fa-telegram',
+    {
+      icon: "fa fa-linkedin",
+      link: "https://www.linkedin.com/in/iamanup17",
+    },
+    {
+      icon: "fa fa-google",
+      link: "https://www.gmail.com/anupmanwatkar",
+    },
+    {
+      icon: "fa fa-facebook",
+      link: "https://www.facebook.com/anup.manwatkar",
+    },
+    {
+      icon: "fa fa-telegram",
+      link: "https://t.me/anup_manwatkar",
+    },
+    {
+      icon: "fa fa-github",
+      link: "https://github.com/iamanup17?tab=repositories",
+    },
   ];
+
   return (
     <section className="contact">
       {props.heading && <h1 className="heading">CONTACT</h1>}
       {props.head && (
         <div className="head">
-          <span>LET’S TALK</span>
-          <span>
-            Share your excitement with us. I will be more than happy to serve my
-            Services to you.
-          </span>
-          <span>Choose any of the below options to connect with me.</span>
+          <span>Contact Me</span>
+         
+          <span>I am available on almost every social media. You can message me, <br />
+            I
+            will reply within 24 hours. I can help you with Single Page Applications using React JS,  <br />Javascript , &  various Technial aspects of Frontend Web development.</span>
+
+          
         </div>
       )}
 
@@ -52,10 +77,12 @@ const Contacts = (props) => {
 
           <div className="icons-row">
             <div className="media-btns">
-              {icons.map((icon, index) => {
+              {icons.map((iconL, index) => {
                 return (
                   <div className="icons" key={index}>
-                    <i className={icon} aria-hidden="true"></i>
+                    <a target="_blank" href={iconL.link}>
+                      <i className={iconL.icon} aria-hidden="true"></i>
+                    </a>
                   </div>
                 );
               })}
@@ -65,26 +92,23 @@ const Contacts = (props) => {
 
 
 
-
-
-        
         <div className="card right-card">
           <div className="header">
-            <h3>Send Me An Enquiry</h3>
+            <h2 className="right-card-header" style={{color:"white"}}>Send Me An Enquiry</h2>
           </div>
           <div className="inputs">
             <input type="text" placeholder="Your Name" />
-          </div>{' '}
+          </div>{" "}
           <div className="inputs">
             <input type="text" placeholder="Your Email" />
-          </div>{' '}
+          </div>{" "}
           <div className="inputs">
             <textarea row="6" col="6" type="text" placeholder="Your Message" />
-          </div>{' '}
+          </div>{" "}
           <div className="inputs">
             <button>SEND MESSAGE</button>
           </div>
-        </div>{' '}
+        </div>{" "}
       </div>
     </section>
   );

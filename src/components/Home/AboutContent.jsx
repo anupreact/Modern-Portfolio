@@ -6,7 +6,7 @@ const AboutContent = (props) => {
   return (
     <section className="about">
       {props.heading && (
-        <h1 className="heading" style={{ textAlign: 'center' }}>
+        <h1 className="heading" style={{ textAlign: 'center' ,letterSpacing:"5px" }}>
           ABOUT
         </h1>
       )}

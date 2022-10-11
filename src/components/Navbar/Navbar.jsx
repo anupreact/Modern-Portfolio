@@ -11,9 +11,12 @@ function Navbar() {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo-container">
+          
             <NavLink exact to="/" className="nav-logo">
-              Anup { " "} Manwatkar.
-              <i className="fas fa-code"></i>
+              <span style={{ fontFamily:"sans-serif"}}> 	&#60; </span>
+             Anup { " "} Manwatkar 
+             <span style={{ fontFamily:"sans-serif"}}> /&#62; </span>
+              {/* <i className="fas fa-code"></i> */}
             </NavLink>
           </div>
 

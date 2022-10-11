@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,7 @@
 }
 
 body {
-  background-color: #0a3947;
+  background-color: #0a3947!important;
 }
 
 .pages {
@@ -41,14 +42,11 @@ body {
   }
   .hero {
     padding: 1rem;
-    // border: 1px solid rgb(180, 183, 184);
     display: flex;
     gap: 1rem;
     justify-content: center;
-    background: #000;
     .left-col,
     .right-col {
-      // border: 1px solid rgb(29, 115, 155);
     }
 
     .left-col {
@@ -59,8 +57,15 @@ body {
         margin-top: 1rem;
         .name {
           // font-weight: bold;
+          width: 65%;
           font-size: 20px;
+          text-align: center;
           color: rgb(248, 248, 248);
+          font-family: "Tangerine", cursive;
+          font-size: 2rem;
+
+          font-family: "Tangerine", cursive;
+
           // letter-spacing: 0.1rem;
         }
         .name-2 {
@@ -97,7 +102,7 @@ body {
 
         .media-btns {
           display: flex;
-          padding: 1rem 0rem;
+          padding: 0rem 0rem 1rem 0rem;
           .icons {
             background: rgb(0, 118, 108);
             width: 2.4rem;
@@ -116,11 +121,12 @@ body {
 
             &:hover {
               border-radius: 150px;
-              background: linear-gradient(145deg, #093340, #0b3d4c);
-              box-shadow: inset 16px 64px 7px #082b35, 3px 1px 2px #0d4759;
+              // background: linear-gradient(145deg, #093340, #0b3d4c);
+              box-shadow: inset 16px 64px 7px #082b35, -2px -1px 10px #0d4759;
             }
             &:hover i {
-              color: rgb(87, 134, 220);
+              color: rgb(0, 255, 234);
+              font-size: 20px;
             }
             i {
               color: rgb(255, 255, 255);
@@ -181,7 +187,7 @@ body {
     }
     .cards-container {
       // border: 1px solid gray;
-      width: 80%;
+      width: 90%;
       margin: 0.4rem auto;
       display: flex;
       flex-wrap: wrap;
@@ -189,13 +195,13 @@ body {
       .card {
         width: 30%;
         // background: rgb(18, 17, 17);
-        border: 1px solid rgb(8, 232, 217);
+        // border: 1px solid rgb(8, 232, 217);
         color: white;
-        padding: 0.2rem;
+        padding: 1rem 0.2rem;
         margin: 0.6rem;
         border-radius: 5px;
         background: linear-gradient(145deg, #093340, #0b3d4c);
-        box-shadow: 8px 8px 16px #082c37, -8px -8px 16px #0c4657;
+        box-shadow: 8px 8px 16px #082c37, -1px -1px 16px #0c4657;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -290,42 +296,109 @@ body {
   // ABOUT SECTION STARTED
   .react-info {
     .head {
-      span {
-        font-family: "Saira Condensed", sans-serif;
-      }
-      // font-style: normal;
-      // font-weight: 600;
+      // background: #000;
+      
       font-size: 30px;
       line-height: px;
       color: #05b3bc;
-      width: 92%;
-      margin: 0rem auto;
-      margin-bottom: 0.3rem;
+      // width: 92%;
       // background: #000;
+      text-align: center;
+      margin: 2rem 0rem;
+      font-weight: bold;
+      color: white;
+      // letter-spacing: 0.1rem;
+      span {
+        font-family: "Nunito Sans", sans-serif;
+        letter-spacing: 6px;
+      }
     }
-    ul {
-      width: 88%;
-      margin: 3rem auto;
-      margin-top: 0.1rem;
-      li {
-        line-height: 1.3;
-        color: rgb(187, 187, 187);
-        font-family: "Saira Condensed", sans-serif;
-        font-size: 1.45rem;
-        letter-spacing: 0.06rem;
+    .what {
+      display: flex;
+      height: auto;
+      gap: 10px;
+      .left-sec {
+        display: flex;
+        // background: #000;
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .tech-icons {
+          color: rgb(113, 222, 255);
+          // background: #000;
+          width: 85%;
+          height: 30%;
+          display: flex;
+          flex-direction: column;
+          h2{
+            letter-spacing: 3px;
+          }
+          .icons {
+            // width: 3rem;
+            margin: 0rem 0.3rem 1rem .3rem;
+            margin
+
+
+            span {
+              width: 10rem !important;
+              // border-radius: 40px;
+            }
+            img {
+              width: 3rem;
+              background: rgb(3, 32, 38);
+              padding: 0.5rem;
+              border-radius: 40px;
+              margin-bottom: 0.7rem;
+              margin-right: 0.5rem;
+              background: #0a3947;
+              box-shadow: -2px 7px 7px #04171c, 0px 1px 3px #105b72;
+              cursor: pointer;
+            }
+          }
+        }
+        ul {
+          width: 90%;
+          margin: 3rem auto;
+          margin-top: 0.1rem;
+          // background: #000;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          // text-align: center;
+          li {
+            line-height: 1.3;
+            color: rgb(187, 187, 187);
+            font-family: "Saira Condensed", sans-serif;
+            font-size: 1.45rem;
+            letter-spacing: 0.06rem;
+            list-style-type: none;
+            margin: 0.4rem;
+          }
+        }
+      }
+      .imageBox {
+        width: 58%;
+        // background: #000;
+        display: flex;
+        align-items: center;
+        // align-items: center;
+        img {
+          width: 100%;
+          // object-fit: cover;
+        }
       }
     }
   }
   .about {
     margin-top: 1rem;
     .heading {
-      // text-align: center;
       color: white;
-      // letter-spacing: 0.3rem;
     }
     .quote {
       color: rgb(243, 243, 243);
-      width: 90%;
+      width: 55%;
       margin: 3rem auto;
       text-align: center;
       font-size: 1.3rem;
@@ -342,16 +415,19 @@ body {
 
     .react-info {
       .head {
-        font-family: "Saira Condensed", sans-serif;
+        // background: #000;
         // font-style: normal;
         // font-weight: 600;
         font-size: 30px;
         line-height: 48px;
-        color: #16b4ee;
+        color: #ffffff;
         width: 90%;
         margin: 3rem auto;
+        // margin-bottom: 5rem;
         margin-bottom: 0.3rem;
         // background: #000;
+
+      
       }
       ul {
         width: 90%;
@@ -386,6 +462,7 @@ body {
       width: 90%;
       margin: 0.4rem auto;
       margin-bottom: 2rem;
+      // text-align: center;
       span {
         display: block;
         color: white;
@@ -429,6 +506,7 @@ body {
         margin: 0.1rem;
         .left-card-header {
           margin: 2rem;
+          color:white
         }
         .edu {
           margin: 1rem 1rem 0.1rem 1rem;
@@ -498,15 +576,16 @@ body {
             height: 10rem;
           }
           button {
-            background: rgb(49, 191, 201);
+            background: rgb(42, 157, 165);
             cursor: pointer;
             font-weight: bold;
             letter-spacing: 0.1rem;
             transition: 0.3s ease all;
             &:hover {
+              background: rgb(49, 191, 201);
+              // background: rgb(57, 122, 126);
               color: #dedede;
               letter-spacing: 0.2rem;
-              background: rgb(17, 220, 235);
             }
           }
         }
@@ -515,7 +594,7 @@ body {
         }
       }
       .right-card {
-        padding: 1rem;
+        padding:1rem
       }
     }
   }
@@ -529,7 +608,7 @@ body {
 // FOOTER STYLES
 .footer {
   // background: rgb(4, 75, 93);
-  background: rgb(31, 82, 94);
+  background: rgb(12, 63, 75);
   display: flex;
   padding: 0.2rem 0rem;
   // height:40px;
@@ -606,7 +685,6 @@ body {
     }
     .content {
       font-family: "Saira Condensed", sans-serif;
-
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -622,6 +700,7 @@ body {
         .icon {
           // background: #000;
           margin-right: 0.8rem;
+          margin-top: 6px;
         }
         .details {
           span {
@@ -740,6 +819,7 @@ body {
   .hero {
     margin: 0 !important;
     padding: 5px !important;
+    flex-direction: column;
     .left-col {
       width: 100% !important;
       margin: 0 !important;
@@ -747,17 +827,16 @@ body {
       justify-content: center;
 
       .content-row1 {
-        
         // height:200px!important;
         .name {
-          font-size: 1rem !important;
-          width: 20rem!important;
+          font-size: 1.4rem !important;
+          width: 100% !important;
           text-align: center;
         }
         .name-2 {
           font-size: 3rem !important;
           text-align: center;
-          line-height: 19px!important;
+          line-height: 38px !important;
         }
         .title {
           font-size: 1rem !important;
@@ -768,31 +847,75 @@ body {
         margin-top: 1rem;
         // background: #000;
         width: 100% !important;
+        text-align: center;
         .subtitle {
-          font-size: 01rem!important;
+          font-size: 01rem !important;
           color: rgb(160, 62, 62);
+        }
+      }
+      .content-row3 {
+        .media-btns {
+          justify-content: center;
+        }
+      }
+      .content-row4 {
+        .download-btn {
+          display: flex;
+          justify-content: center;
+          button {
+            width: 80%;
+          }
         }
       }
     }
     .right-col {
-      display: none !important;
+      // display: none !important;
+      width: 100% !important;
+      justify-content: center;
+      padding: 2rem;
       img {
-        display: none;
+        // display: none;
       }
     }
   }
 
   .react-info {
     .head {
+      span{
+        font-size: 1.1rem;
+        letter-spacing: 2px!important;
+      }
     }
     ul li {
       font-size: 1rem !important;
+    }
+    .what {
+      justify-content: start;
+
+      .left-sec {
+        .tech-icons {
+          text-align: center;
+          // background: #000;
+          h2{
+            font-size: 1rem;
+          }
+        }
+      }
+      .imageBox {
+        // background: #000;
+        display: none !important;
+      }
+    }
+    ul {
+      width: 100% !important;
+      // background: #000;
+      padding: 1rem;
     }
   }
 
   .about-card-wrapper {
     .left {
-      margin:2rem;
+      margin: 1rem .6rem;
       .content {
         height: auto;
         .row {
@@ -800,9 +923,8 @@ body {
         }
       }
     }
-    .right{
-      margin:2rem;
-
+    .right {
+      margin: 1rem .6rem;
     }
   }
   .projects_page_container {
@@ -831,13 +953,77 @@ body {
         margin: 0 !important;
         width: 100%;
         .card {
+          margin: 1rem 2rem;
           width: 98% !important;
         }
       }
     }
   }
+  .about_page_container {
+    .about{
+      .quote{
+        width:96%;
+        font-size: 1rem;
+      }
+    }
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    .left-col,
+    .right-col {
+      width: 100% !important;
+      justify-content: center !important;
+    }
+    .left-col {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .content-row1,
+      .content-row2,
+      .content-row3,
+      .content-row4 {
+        width: 100% !important;
+        text-align: center;
+        .media-btns {
+          justify-content: center;
+        }
+        .name {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  .react-info {
+    .head {
+    }
+    ul li {
+      font-size: 1.4rem !important;
+    }
+    .what {
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .left-sec {
+        .tech-icons {
+          text-align: center;
+          // background: #000;
+        }
+      }
+      .imageBox {
+        display: none !important;
+      }
+    }
+    ul {
+      width: 100% !important;
+      // background: #000;
+      padding: 1rem;
+    }
+  }
+
   .projects,
   .home_container {
     .cards-container {
