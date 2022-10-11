@@ -44,9 +44,11 @@ a{
   /* flex-grow: 1; */
   font-family: 'Great Vibes', cursive;
   text-transform: capitalize;
+  transition: transform ease 100ms;
 }
 .nav-logo:hover{
-  color:rgb(192, 108, 140)
+  /* color:rgb(192, 108, 140); */
+  transform:scale(0.9)
 }
 
 .nav-menu {

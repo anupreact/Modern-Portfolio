@@ -118,15 +118,14 @@ body {
             box-shadow: -2px 7px 7px #04171c, 0px 1px 3px #105b72;
             cursor: pointer;
             transition: 0.3s ease all;
+            transition: transform ease 100ms;
 
             &:hover {
-              border-radius: 150px;
-              // background: linear-gradient(145deg, #093340, #0b3d4c);
-              box-shadow: inset 16px 64px 7px #082b35, -2px -1px 10px #0d4759;
+      
+              transform:scale(1.3)
             }
             &:hover i {
               color: rgb(0, 255, 234);
-              font-size: 20px;
             }
             i {
               color: rgb(255, 255, 255);
@@ -543,7 +542,10 @@ body {
               box-shadow: -2px 7px 7px #04171c, 0px 1px 3px #105b72;
               cursor: pointer;
 
+              transition: transform ease 100ms;
+              
               &:hover {
+                transform:scale(1.3)
               }
               &:hover i {
                 color: rgb(0, 255, 204);
