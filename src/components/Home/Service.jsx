@@ -8,8 +8,11 @@ import { MdDeveloperMode } from 'react-icons/md';
 
 import { AiFillApi } from 'react-icons/ai';
 import { BiSupport } from 'react-icons/bi';
+import { useScroll } from '../useScroll';
 
 const Service = (props) => {
+  const [element, controls] = useScroll();
+
   const cardData = [
     {
       logo:<RiReactjsLine/>,
@@ -51,7 +54,7 @@ const Service = (props) => {
   ];
 
   return (
-    <section className="services">
+    <section className="services" ref={element}>
       <h1 className="heading">SERVICES</h1>
       <div className="cards-container">
         {cardData.map((data, index) => {
@@ -62,6 +65,8 @@ const Service = (props) => {
               logo={logo}
               title={title}
               description={description}
+              element ={element}
+              controls ={controls}
             />
           );
         })}

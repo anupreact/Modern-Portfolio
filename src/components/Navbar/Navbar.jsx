@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import './Navbar.css';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -10,17 +11,26 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="nav-container">
-          <div className="nav-logo-container">
-          
+          <motion.div
+            className="nav-logo-container"
+            initial={{ x: -300 }}
+            animate={{ x: 0 }}
+            transition={{ delay: 0.4 , duration:1 }}
+          >
             <NavLink exact to="/" className="nav-logo">
-              <span style={{ fontFamily:"sans-serif"}}> 	&#60; </span>
-             Anup { " "} Manwatkar 
-             <span style={{ fontFamily:"sans-serif"}}> /&#62; </span>
+              <span style={{ fontFamily: "sans-serif" }}> &#60; </span>
+              Anup Manwatkar
+              <span style={{ fontFamily: "sans-serif" }}> /&#62; </span>
               {/* <i className="fas fa-code"></i> */}
             </NavLink>
-          </div>
+          </motion.div>
 
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <motion.ul
+            initial={{ x: 800 }}
+            animate={{ x: 0 }}
+            transition={{ delay: 0.4 , duration:1 }}
+            className={click ? "nav-menu active" : "nav-menu"}
+          >
             <li className="nav-item">
               <NavLink
                 to="/home"
@@ -62,9 +72,9 @@ function Navbar() {
                 Contact
               </NavLink>
             </li>
-          </ul>
+          </motion.ul>
           <div className="nav-icon" onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
+            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
         </div>
       </nav>

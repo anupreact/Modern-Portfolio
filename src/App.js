@@ -8,6 +8,8 @@ import Contact from './screens/Contact';
 import Home from './screens/Home';
 import Projects from './screens/Projects';
 
+import { motion } from "framer-motion";
+
 function App() {
   return (
 

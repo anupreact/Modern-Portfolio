@@ -2,9 +2,10 @@ import React from "react";
 import hero_image from "../../images/hero.png";
 import hero_image1 from "../../images/hero1.png";
 // import hero_image2 from '../../images/hero2.svg';
-import banner_3d from '../../images/banner3d.png';
+import banner_3d from "../../images/banner3d.png";
 import AboutTech from "./AboutTech";
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 const name = "Anup Manwatkar,";
 const title = "Frontend React-Js Developer.";
@@ -18,8 +19,8 @@ const icons = [
   {
     icon: "fa fa-linkedin",
     link: "https://www.linkedin.com/in/iamanup17",
-  }, 
-   {
+  },
+  {
     icon: "fa fa-google",
     link: "https://www.gmail.com/anupmanwatkar",
   },
@@ -40,7 +41,12 @@ const icons = [
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="left-col">
+      <motion.div
+        className="left-col"
+        initial={{ opacity: 0, scale: 1.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: .4  , duration:1}}
+      >
         <div className="content-row1">
           <div className="name">Hello My Name is </div>
           <div className=" name-2">{name}</div>
@@ -87,16 +93,21 @@ const Hero = () => {
             <button>Download CV</button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="right-col">
+      <motion.div
+        className="right-col"
+        initial={{ opacity: 0, scale: 1.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.6 , duration:1.2  }}
+      >
         {/* <img src={hero_image} alt=" hero " /> */}
         <img
           src="https://wpwebinfotech.com/wp-content/uploads/2022/03/Web-development.svg"
           alt=" hero "
         />
         {/* <img src={banner_3d} alt=" hero " /> */}
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -6,9 +6,21 @@ import js from "../../images/js.png";
 import react from "../../images/react.png";
 import sass from "../../images/sass.png";
 import mui from "../../images/mui.png";
+import { useScroll } from "../useScroll";
+import { MotionConfig } from "framer-motion";
+import { motion } from "framer-motion";
+import { reveal, revealRTL, textAnimation } from "../Animations";
 
 const AboutTech = () => {
-  const images = [`${html}`, `${css}`, `${js}`, `${react}`, `${sass}`, `${mui}`];
+  const [element, controls] = useScroll();
+  const images = [
+    `${html}`,
+    `${css}`,
+    `${js}`,
+    `${react}`,
+    `${sass}`,
+    `${mui}`,
+  ];
 
   const techData = [
     "⚡ Building reusable components and front-end libraries for future use.",
@@ -25,25 +37,30 @@ const AboutTech = () => {
   ];
 
   return (
-    <div className="react-info">
+    <div className="react-info" ref={element}>
       <div className="head">
         <span>WHAT I DO ? </span>
         <br /> <br />
       </div>
 
       <div className="what">
-        <div className="left-sec">
+        <motion.div
+          variants={reveal}
+          initial={{opacity:0}}
+          animate={controls }
+          transition={{ duration: 1 }}
+          className="left-sec"
+        >
           <div className="tech-icons">
             <h2 style={{ color: "white" }}>Frontend Web-Development</h2>
             <div className="icons">
-              {images.map((image , index) => {
+              {images.map((image, index) => {
                 return (
                   <span key={index}>
                     <img src={image} alt="" />
                   </span>
                 );
               })}
-              
             </div>
           </div>
           <ul>
@@ -51,11 +68,16 @@ const AboutTech = () => {
               return <li key={index}>{list}</li>;
             })}
           </ul>
-        </div>
+        </motion.div>
 
-        <div className="imageBox">
+        <motion.div
+          variants={revealRTL}
+          animate={controls}
+          transition={{ duration: 1 }}
+          className="imageBox"
+        >
           <img src={hero_image1} alt=" hero " />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
