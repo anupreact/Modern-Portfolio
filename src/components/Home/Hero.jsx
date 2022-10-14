@@ -5,7 +5,7 @@ import hero_image1 from "../../images/hero1.png";
 import banner_3d from "../../images/banner3d.png";
 import AboutTech from "./AboutTech";
 import { Typewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 const name = "Anup Manwatkar,";
 const title = "Frontend React-Js Developer.";
@@ -39,13 +39,16 @@ const icons = [
 ];
 
 const Hero = () => {
+
+  // const [element, controls] = useScroll();
+
   return (
     <section className="hero">
       <motion.div
         className="left-col"
         initial={{ opacity: 0, scale: 1.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: .4  , duration:1}}
+        transition={{ delay: 0  , duration:.5}}
       >
         <div className="content-row1">
           <div className="name">Hello My Name is </div>

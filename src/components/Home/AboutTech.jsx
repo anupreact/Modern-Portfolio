@@ -9,7 +9,14 @@ import mui from "../../images/mui.png";
 import { useScroll } from "../useScroll";
 import { MotionConfig } from "framer-motion";
 import { motion } from "framer-motion";
-import { reveal, revealRTL, textAnimation } from "../Animations";
+import {
+  cardAnimation,
+  reveal,
+  revealRTL,
+  textAnimation,
+  topContainerAnimation,
+  videoAnimation,
+} from "../Animations";
 
 const AboutTech = () => {
   const [element, controls] = useScroll();
@@ -38,16 +45,22 @@ const AboutTech = () => {
 
   return (
     <div className="react-info" ref={element}>
-      <div className="head">
+      <motion.div
+        variants={cardAnimation}
+        initial={{ opacity: 0 }}
+        animate={controls}
+        transition={{ duration: .3 }}
+        className="head"
+      >
         <span>WHAT I DO ? </span>
         <br /> <br />
-      </div>
+      </motion.div>
 
       <div className="what">
         <motion.div
-          variants={reveal}
-          initial={{opacity:0}}
-          animate={controls }
+          variants={cardAnimation}
+          initial={{ opacity: 0 }}
+          animate={controls}
           transition={{ duration: 1 }}
           className="left-sec"
         >
@@ -71,7 +84,7 @@ const AboutTech = () => {
         </motion.div>
 
         <motion.div
-          variants={revealRTL}
+          variants={cardAnimation}
           animate={controls}
           transition={{ duration: 1 }}
           className="imageBox"

@@ -1,16 +1,20 @@
 import React from "react";
-import { cardAnimation, reveal } from "../Animations";
+import { cardAnimation, fromUp, reveal } from "../Animations";
 import { useScroll } from "../useScroll";
 import { motion } from "framer-motion";
 
 const ServiceCard = (props) => {
-  const { logo, title, description, icon, controls, element } = props;
+  const [element, controls] = useScroll();
+
+  const { logo, title, description, icon } = props;
   return (
     <motion.div
+      ref={element}
       variants={cardAnimation}
+      // variants={fromUp}
       initial={{ opacity: 0 }}
       animate={controls}
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 0.5 }}
       className="card"
     >
       <div className="logo">

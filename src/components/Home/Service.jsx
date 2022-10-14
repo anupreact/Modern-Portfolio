@@ -9,6 +9,8 @@ import { MdDeveloperMode } from 'react-icons/md';
 import { AiFillApi } from 'react-icons/ai';
 import { BiSupport } from 'react-icons/bi';
 import { useScroll } from '../useScroll';
+import { cardAnimation } from '../Animations';
+import { motion } from "framer-motion";
 
 const Service = (props) => {
   const [element, controls] = useScroll();
@@ -55,7 +57,10 @@ const Service = (props) => {
 
   return (
     <section className="services" ref={element}>
-      <h1 className="heading">SERVICES</h1>
+      <motion.h1  variants={cardAnimation}
+        initial={{ opacity: 0 }}
+        animate={controls}
+        transition={{ duration: .3 }} className="heading">SERVICES</motion.h1>
       <div className="cards-container">
         {cardData.map((data, index) => {
           const { logo, title, description } = data;
@@ -65,8 +70,8 @@ const Service = (props) => {
               logo={logo}
               title={title}
               description={description}
-              element ={element}
-              controls ={controls}
+              // element ={element}
+              // controls ={controls}
             />
           );
         })}

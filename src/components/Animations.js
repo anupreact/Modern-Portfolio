@@ -13,7 +13,7 @@ export const reveal = {
   show: { y: 0  , opacity:1 },
 };
 export const revealRTL = {
-  hidden: { y: 200 ,opacity:0},
+  hidden: { y: -400 ,opacity:0},
   show: { y: 0 ,opacity:1},
 };
 

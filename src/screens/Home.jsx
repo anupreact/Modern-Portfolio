@@ -5,11 +5,15 @@ import Contacts from '../components/Home/Contacts';
 import Hero from '../components/Home/Hero';
 import Project from '../components/Home/Project';
 import Service from '../components/Home/Service';
+import { useScroll } from '../components/useScroll';
 import hero_image from '../images/hero.png';
 
 const Home = () => {
+
+  const [element, controls] = useScroll();
+
   return (
-    <main className="home_container">
+    <main className="home_container" ref={element}>
       {/* HERO SECTION STARTED */}
       <Hero />
 

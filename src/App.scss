@@ -22,7 +22,9 @@ body {
   font-size: 3.5rem;
   // margin-top: 10%;
 }
-
+.home_container{
+  // background: #000;
+}
 .home_container,
 .projects_page_container,
 .about_page_container,
@@ -193,7 +195,6 @@ body {
       justify-content: center;
       .card {
         width: 30%;
-        // background: rgb(18, 17, 17);
         // border: 1px solid rgb(8, 232, 217);
         color: white;
         padding: 1rem 0.2rem;
@@ -205,6 +206,13 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        // background: rgb(18, 17, 17);
+        transition: transform ease 100ms!important;
+        &:hover{
+          transform: scale(1.07)!important;
+          cursor:pointer;
+          // background: #000;
+        }
         .logo {
           color: rgb(0, 217, 255);
           // color: rgb(8, 232, 217);
@@ -231,13 +239,6 @@ body {
         // div {
         //   margin: 1rem;
         // }
-        transition: transform ease 200ms;
-        &:hover{
-          // transform: translate(0, -10px);
-          transform: scale(1.05);
-          cursor:pointer;
-          // background: #000;
-        }
       }
     }
   }
@@ -398,6 +399,7 @@ body {
     }
   }
   .about {
+    // background: #000;
     margin-top: 1rem;
     .heading {
       color: white;

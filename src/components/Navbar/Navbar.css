@@ -47,8 +47,8 @@ a{
   transition: transform ease 100ms;
 }
 .nav-logo:hover{
-  /* color:rgb(192, 108, 140); */
-  transform:scale(0.9)
+  color:rgb(0, 234, 255);
+  transform:scale(1.06)
 }
 
 .nav-menu {
@@ -65,6 +65,9 @@ a{
   padding: 0.5rem 1rem;
   height: 100%;
   /* border-bottom: 3px solid transparent; */
+}
+.nav-links:hover{
+  color:rgb(0, 255, 247)
 }
 .fa-code {
   margin-left: 1rem;
@@ -86,11 +89,11 @@ a{
 
 .nav-item:hover:after {
   width: 100%;
-  background: #18a4e0;
+  /* background: #00eae2; */
 }
 
 .nav-item a.active {
-  color: #09ffa1;
+  color: #00ecd8;
 }
 
 .nav-icon {
@@ -104,7 +107,7 @@ a{
     width: 100%;
     border-top: 1px solid #fff;
     position: absolute;
-    top: 80px;
+    top: 50px;
     left: -110%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -131,7 +134,7 @@ a{
   .nav-icon {
     display: block;
     position: absolute;
-    top: 0;
+    top: -9px;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;

@@ -1,8 +1,12 @@
 import { Progress } from "antd";
 import React from "react";
 import { motion } from "framer-motion";
+import { useScroll } from "../useScroll";
+import { cardAnimation } from "../Animations";
 
 const AboutCard = () => {
+  const [element, controls] = useScroll();
+
   const eduData = [
     {
       year: "High School - 2011",
@@ -70,8 +74,15 @@ const AboutCard = () => {
   ];
 
   return (
-    <section className="about-card-wrapper">
-      <div className="left">
+    <section className="about-card-wrapper" ref={element}>
+      <motion.div
+        className="left"
+        ref={element}
+        variants={cardAnimation}
+        initial={{ opacity: 0 }}
+        animate={controls}
+        transition={{ duration: 1 }}
+      >
         <div className="heading">Eduction & Experience</div>
         <div className="content">
           {eduData.reverse().map((item, index) => {
@@ -93,9 +104,17 @@ const AboutCard = () => {
             );
           })}
         </div>
-      </div>
+      </motion.div>
 
-      <div className="right">
+      <motion.div
+        ref={element}
+        className="right"
+        variants={cardAnimation}
+        // variants={fromUp}
+        initial={{ opacity: 0 }}
+        animate={controls}
+        transition={{ duration: 1 }}
+      >
         <div className="heading">Technical Skills</div>
 
         {skillData.map((item, index) => {
@@ -117,7 +136,7 @@ const AboutCard = () => {
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 };

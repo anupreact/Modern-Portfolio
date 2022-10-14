@@ -17,7 +17,7 @@ function Navbar() {
             animate={{ x: 0 }}
             transition={{ delay: 0.4 , duration:1 }}
           >
-            <NavLink exact to="/" className="nav-logo">
+            <NavLink to="/" className="nav-logo">
               <span style={{ fontFamily: "sans-serif" }}> &#60; </span>
               Anup Manwatkar
               <span style={{ fontFamily: "sans-serif" }}> /&#62; </span>
@@ -34,7 +34,7 @@ function Navbar() {
             <li className="nav-item">
               <NavLink
                 to="/home"
-                activeClassName="active"
+                activeclassname="active"
                 className="home-page nav-links"
                 onClick={handleClick}
               >
@@ -44,7 +44,7 @@ function Navbar() {
             <li className="nav-item">
               <NavLink
                 to="/projects"
-                activeClassName=""
+                activeclassname=""
                 className="nav-links"
                 onClick={handleClick}
               >
@@ -54,7 +54,7 @@ function Navbar() {
             <li className="nav-item">
               <NavLink
                 to="/about"
-                activeClassName=""
+                activeclassname=""
                 className="nav-links"
                 onClick={handleClick}
               >
@@ -63,9 +63,9 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink
-                exact
+                
                 to="/contact"
-                activeClassName=""
+                activeclassname=""
                 className="nav-links"
                 onClick={handleClick}
               >
