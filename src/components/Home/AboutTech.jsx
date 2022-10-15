@@ -35,9 +35,7 @@ const AboutTech = () => {
     "⚡ Design and develop new custom components to meet project requirements.",
     "⚡Optimizing components for maximum performance across a vast array of web-capable devices and browsers.",
     "⚡Strong proficiency in JavaScript, including DOM manipulation, JavaScript object model & CSS preprocessors like SASS.",
-
     "⚡ Ability to understand business requirements and translate them into technical requirements.",
-
     "⚡Hands on Experience with React class and functional components, Forms, Events, Keys, Router, & Redux library.",
     "⚡ Familiarity with code versioning tools {such as Github & bitBucket}.",
     "⚡Familier with various React UI libraries like Material UI, antDesign, & React-bootstrap etc.",
@@ -53,7 +51,7 @@ const AboutTech = () => {
         className="head"
       >
         <span>WHAT I DO ? </span>
-        <br /> <br />
+        
       </motion.div>
 
       <div className="what">

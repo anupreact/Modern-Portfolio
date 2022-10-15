@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 import { useScroll } from "../useScroll";
 import {
@@ -11,16 +12,81 @@ import {
   textAnimation,
   topContainerAnimation,
 } from "../Animations";
+import { Button, message } from "antd";
+const key = "updatable";
 
 const Contacts = (props) => {
   const [element, controls] = useScroll();
 
-  // const icons = [
-  //   'fa fa-linkedin',
-  //   'fa fa-envelope',
-  //   'fa fa-github',
-  //   'fa fa-telegram',
-  // ];
+  const [state, setState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const { name, email, messages } = state;
+
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setState({ ...state, [name]: value });
+  };
+
+  // Loading Message
+  const openMessage = () => {
+    message.loading({
+      content: "Sending...",
+      key,
+    });
+    setTimeout(() => {
+      message.success({
+        content: "Message Sent successfully!",
+        key,
+        duration: 2,
+      });
+    }, 2000);
+  };
+  // Loading Message
+
+  const error = (text) => {
+    message.error(text, 1);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (name !== "" && email !== "") {
+      openMessage();
+      const templateParams = {
+        name: name,
+        email: email,
+        messages: messages,
+      };
+      emailjs
+        .send(
+          "service_wn68p1a",
+          "template_vq1q3ok",
+          templateParams,
+          "ALSqlnGCMmLwFsfGy"
+        )
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          (err) => {
+            console.log("FAILED...", err);
+          }
+        );
+      setTimeout(() => {
+        setState({
+          name: "",
+          email: "", 
+          messages: "",
+        });
+      }, 2000);
+    } else {
+      error("name and email required");
+    }
+  };
 
   const icons = [
     {
@@ -49,10 +115,10 @@ const Contacts = (props) => {
     <motion.section className="contact" ref={element}>
       {props.heading && (
         <motion.h1
-        variants={cardAnimation}
-        initial={{ opacity: 0 }}
-        animate={controls}
-        transition={{ duration: .3 }}
+          variants={cardAnimation}
+          initial={{ opacity: 0 }}
+          animate={controls}
+          transition={{ duration: 0.3 }}
           className="heading"
         >
           CONTACT
@@ -60,13 +126,19 @@ const Contacts = (props) => {
       )}
       {props.head && (
         <div className="head">
-          <motion.span  initial={{ opacity: 0, scale: 1.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0, duration: .4 }}>Contact Me</motion.span>
+          <motion.span
+            initial={{ opacity: 0, scale: 1.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0, duration: 0.4 }}
+          >
+            Contact Me
+          </motion.span>
 
-          <motion.span initial={{ opacity: 0, scale: 1.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0, duration: .4 }}>
+          <motion.span
+            initial={{ opacity: 0, scale: 1.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0, duration: 0.4 }}
+          >
             I am available on almost every social media. You can message me,{" "}
             <br />
             I will reply within 24 hours. I can help you with Single Page
@@ -81,7 +153,7 @@ const Contacts = (props) => {
         // variants={fromUp}
         initial={{ opacity: 0 }}
         animate={controls}
-        transition={{ duration: .02 }}
+        transition={{ duration: 0.02 }}
         className="cards-container"
       >
         <div className="card">
@@ -164,7 +236,7 @@ const Contacts = (props) => {
           </div>
         </div>
         <motion.div
-        ref={element}
+          ref={element}
           variants={fromUp}
           // variants={fromUp}
           initial={{ opacity: 1 }}
@@ -185,18 +257,46 @@ const Contacts = (props) => {
               Send Me An Enquiry
             </motion.h2>
           </div>
-          <div className="inputs">
-            <input type="text" placeholder="Your Name" />
-          </div>{" "}
-          <div className="inputs">
-            <input type="text" placeholder="Your Email" />
-          </div>{" "}
-          <div className="inputs">
-            <textarea row="6" col="6" type="text" placeholder="Your Message" />
-          </div>{" "}
-          <div className="inputs">
-            <button>SEND MESSAGE</button>
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="inputs">
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                value={name}
+                onChange={(e) => {
+                  handleChange(e);
+                }}
+              />
+            </div>{" "}
+            <div className="inputs">
+              <input
+                type="text"
+                placeholder="Your Email"
+                name="email"
+                value={email}
+                onChange={(e) => {
+                  handleChange(e);
+                }}
+              />
+            </div>{" "}
+            <div className="inputs">
+              <textarea
+                row="6"
+                col="6"
+                type="text"
+                placeholder="Your Message"
+                name="message"
+                value={messages}
+                onChange={(e) => {
+                  handleChange(e);
+                }}
+              />
+            </div>{" "}
+            <div className="inputs">
+              <button>SEND MESSAGE</button>
+            </div>
+          </form>
         </motion.div>{" "}
       </motion.div>
     </motion.section>

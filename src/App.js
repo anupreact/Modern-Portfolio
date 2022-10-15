@@ -9,6 +9,7 @@ import Home from './screens/Home';
 import Projects from './screens/Projects';
 
 import { motion } from "framer-motion";
+import NotFound from './screens/NotFound';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />

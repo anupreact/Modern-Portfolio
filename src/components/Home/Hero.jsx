@@ -61,12 +61,12 @@ const Hero = () => {
               {/* Style will be inherited from the parent element */}{" "}
               <Typewriter
                 words={["Frontend Web Developer", "React JS Developer"]}
-                loop={1}
+                loop={Infinity}
                 cursor
                 cursorStyle="_"
                 typeSpeed={70}
                 deleteSpeed={50}
-                delaySpeed={1000}
+                delaySpeed={2000}
                 // onLoopDone={handleDone}
                 // onType={handleType}
               />
@@ -102,7 +102,7 @@ const Hero = () => {
         className="right-col"
         initial={{ opacity: 0, scale: 1.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.6 , duration:1.2  }}
+        transition={{ duration:1  }}
       >
         {/* <img src={hero_image} alt=" hero " /> */}
         <img

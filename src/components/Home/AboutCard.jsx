@@ -75,6 +75,8 @@ const AboutCard = () => {
 
   return (
     <section className="about-card-wrapper" ref={element}>
+
+      {/* L E F T - - C A R D */}
       <motion.div
         className="left"
         ref={element}
@@ -105,7 +107,9 @@ const AboutCard = () => {
           })}
         </div>
       </motion.div>
+      {/* L E F T - - C A R D */}
 
+      {/* R I G H T - - C A R D */}
       <motion.div
         ref={element}
         className="right"
@@ -137,6 +141,8 @@ const AboutCard = () => {
           );
         })}
       </motion.div>
+      {/* R I G H T - - C A R D */}
+
     </section>
   );
 };
