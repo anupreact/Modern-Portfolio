@@ -458,7 +458,6 @@ body {
   // CONTACT SECTION STARTED
 
   .contact {
-    // border: 1px solid yellow;
     margin-top: 1rem;
     .heading {
       text-align: center;
@@ -514,11 +513,13 @@ body {
         margin: 0.1rem;
         .left-card-header {
           margin: 2rem;
-          color:white
+          color:white;
+          
         }
         .edu {
           margin: 1rem 1rem 0.1rem 1rem;
           display: flex;
+         
         }
 
         // Here it is
@@ -609,6 +610,14 @@ body {
       }
     }
   }
+
+
+ .home_container {
+   .contact{
+     margin-bottom: 1rem;
+   }
+ }
+
   // CONTACT SECTION ENDED
 
   // FOOTER SECTION STARTED
@@ -619,7 +628,8 @@ body {
 // FOOTER STYLES
 .footer {
   // background: rgb(4, 75, 93);
-  background: rgb(12, 63, 75);
+
+  // background: rgb(12, 63, 75);
   display: flex;
   padding: 0.2rem 0rem;
   // height:40px;
@@ -825,6 +835,10 @@ body {
   }
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
+
+  .mobile-nav{
+    display: flex!important;
+  }
   .home_container {
     margin: 0;
     padding: 0px;

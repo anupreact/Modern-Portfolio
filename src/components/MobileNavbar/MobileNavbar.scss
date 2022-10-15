@@ -1,0 +1,69 @@
+.mobile-nav {
+  margin-top: 5rem;
+  background: none;
+  display: flex;
+  // display:none;
+  justify-content: center;
+  position: sticky;
+  bottom: 0;
+  opacity: 1;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 0.4rem 0rem 0rem 0rem;
+    padding: 0.4rem 0rem;
+    // border-top-left-radius: 15px;
+    // border-top-right-radius: 15px;
+    background: linear-gradient(145deg, #093340, #0b3d4c);
+
+    box-shadow: inset 3px 3px 4px 0 rgba(0, 0, 0, 0.2),
+      inset -2px -2px 3px 0 rgba(255, 255, 255, 0.2);
+
+    // background: none;
+    // box-shadow:none
+  }
+  .links {
+    // padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    .icon {
+      // padding: 0.3rem;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: #0a3947;
+      box-shadow: -2px 7px 7px #04171c, 0px 1px 3px #105b72;
+      cursor: pointer;
+      // box-shadow:
+      // inset 3px 3px 4px 0 rgba(0,0,0,0.2),
+      // inset -2px -2px 3px 0 rgba(255,255,255,0.2);
+
+      i {
+        color: white;
+        font-size: 1rem;
+      }
+    }
+    .name {
+      color: white;
+      font-size: 10px;
+    }
+
+    .active{
+      .name{
+        color:rgb(0, 200, 255);
+        display: flex;justify-content: center;
+        
+      }
+    }
+  }
+}

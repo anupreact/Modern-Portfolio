@@ -10,6 +10,7 @@ import Projects from './screens/Projects';
 
 import { motion } from "framer-motion";
 import NotFound from './screens/NotFound';
+import MobileNavbar from './components/MobileNavbar/MobileNavbar';
 
 function App() {
   return (
@@ -26,9 +27,11 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
-      </Routes>
+      </Routes> 
+
 
       <Footer />
+      <MobileNavbar/>
     </BrowserRouter>
     </>
   );
