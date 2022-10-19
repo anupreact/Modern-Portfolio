@@ -175,12 +175,12 @@ const Contacts = (props) => {
             transition={{ duration: 0.5 }}
             className="edu"
           >
-            <div className="icon">
+            <div className="icon ">
               <i className="fa fa-map-marker" aria-hidden="true"></i>
             </div>
             <div className="content">
               <span>At Post Mohagaon (Zilpi) , Ta. Hingna</span>
-              <div>Maharashtra Nagpur, 441110</div>
+              <div className="state">Maharashtra Nagpur, 441110</div>
             </div>
           </motion.div>
           <motion.div

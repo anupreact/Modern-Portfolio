@@ -39,7 +39,6 @@ const icons = [
 ];
 
 const Hero = () => {
-
   // const [element, controls] = useScroll();
 
   return (
@@ -48,7 +47,7 @@ const Hero = () => {
         className="left-col"
         initial={{ opacity: 0, scale: 1.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0  , duration:.5}}
+        transition={{ delay: 0, duration: 0.5 }}
       >
         <div className="content-row1">
           <div className="name">Hello My Name is </div>
@@ -93,7 +92,9 @@ const Hero = () => {
 
         <div className="content-row4">
           <div className="download-btn">
-            <button>Download CV</button>
+            <a href="/src/images/Resume_New_Updated.pdf" download>
+              <button>Download CV</button>
+            </a>
           </div>
         </div>
       </motion.div>
@@ -102,7 +103,7 @@ const Hero = () => {
         className="right-col"
         initial={{ opacity: 0, scale: 1.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration:1  }}
+        transition={{ duration: 1 }}
       >
         {/* <img src={hero_image} alt=" hero " /> */}
         <img

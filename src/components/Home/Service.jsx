@@ -57,7 +57,9 @@ const Service = (props) => {
 
   return (
     <section className="services" ref={element}>
-      <motion.h1  variants={cardAnimation}
+      <motion.h1 
+       variants={cardAnimation}
+    
         initial={{ opacity: 0 }}
         animate={controls}
         transition={{ duration: .3 }} className="heading">SERVICES</motion.h1>

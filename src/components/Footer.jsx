@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
 
       <span className="disclaimer">
-        Copyright @ All Rights reserved 2022 | Made with <span style={{color:"red"}}>&#10084;</span>  by Anup
+        Copyright @ All Rights reserved 2022 | Made with <span >&#10084;</span>  by Anup
       </span>
     </section>
   );

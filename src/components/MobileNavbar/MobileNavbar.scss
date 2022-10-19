@@ -2,7 +2,7 @@
   margin-top: 5rem;
   background: none;
   display: flex;
-  // display:none;
+  display: none;
   justify-content: center;
   position: sticky;
   bottom: 0;
@@ -10,10 +10,11 @@
   .wrapper {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    width: 100%;
+    gap: 1.4rem;
+    width: 90%;
     margin: 0.4rem 0rem 0rem 0rem;
     padding: 0.4rem 0rem;
+    border-radius: 20px;
     // border-top-left-radius: 15px;
     // border-top-right-radius: 15px;
     background: linear-gradient(145deg, #093340, #0b3d4c);
@@ -30,8 +31,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
+    text-align: center;
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
     .icon {
       // padding: 0.3rem;
@@ -58,11 +64,11 @@
       font-size: 10px;
     }
 
-    .active{
-      .name{
-        color:rgb(0, 200, 255);
-        display: flex;justify-content: center;
-        
+    .active {
+      .name {
+        color: rgb(0, 200, 255);
+        display: flex;
+        justify-content: center;
       }
     }
   }

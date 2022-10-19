@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: #0a3947!important;
+  background-color: #0a3947 !important;
 }
 
 .pages {
@@ -22,7 +22,7 @@ body {
   font-size: 3.5rem;
   // margin-top: 10%;
 }
-.home_container{
+.home_container {
   // background: #000;
 }
 .home_container,
@@ -123,8 +123,7 @@ body {
             transition: transform ease 100ms;
 
             &:hover {
-      
-              transform:scale(1.3)
+              transform: scale(1.3);
             }
             &:hover i {
               color: rgb(0, 255, 234);
@@ -148,6 +147,9 @@ body {
             cursor: pointer;
             &:hover {
               background: rgb(245, 159, 0);
+            }
+            a{
+              color:rgb(255, 255, 255);
             }
           }
         }
@@ -207,10 +209,10 @@ body {
         align-items: center;
         flex-direction: column;
         // background: rgb(18, 17, 17);
-        transition: transform ease 100ms!important;
-        &:hover{
-          transform: scale(1.07)!important;
-          cursor:pointer;
+        transition: transform ease 100ms !important;
+        &:hover {
+          transform: scale(1.07) !important;
+          cursor: pointer;
           // background: #000;
         }
         .logo {
@@ -262,7 +264,8 @@ body {
       justify-content: center;
       .card {
         width: 30%;
-        height: 100%;
+        // height: 100%;
+        // height: 22rem;
         display: flex;
         flex-direction: column;
         // background: rgb(18, 17, 17);
@@ -276,9 +279,10 @@ body {
         .image-box {
           // border: 1px solid green;
           width: 100%;
+          // height:10rem;
           img {
             width: 100%;
-            height: 100%;
+            // height: 80%;
             border-top-right-radius: 13px;
             border-top-left-radius: 13px;
           }
@@ -287,13 +291,47 @@ body {
           margin: 1rem;
           margin-bottom: 0.1rem;
           font-weight: bold;
-          color: #316685;
+          color: #19c1d1;
+          letter-spacing: .1rem;
         }
         .description {
-          margin: 1rem;
+          margin: 0.4rem 1rem 0rem 1rem;
+          span{
+            &:nth-child(1){
+              color:#19c1d1;
+              font-size: 1rem;
+              font-weight: bold;
+               letter-spacing: .1rem;
+            }
+            &:nth-child(2){
+              color:#cecece;
+               letter-spacing: .03rem;
+              font-size: 1rem;
+
+            }
+          }
         }
         .visit {
-          margin: 1rem;
+          margin: 0.6rem 1rem 0.6rem 1rem;
+          letter-spacing: .08rem;
+          a{
+            button{
+              border:none;
+              border-radius: 5px;
+              background: rgb(14, 129, 152);
+              padding: .2rem 1rem;
+              cursor: pointer;
+
+              background: #0a3947;
+            box-shadow: -2px 3px 2px #04171c, 0px 1px 3px #105b72;
+            transition: .1s ease all;
+            &:hover{
+              transform: scale(1.03);
+              color:aqua
+            }
+            
+            }
+          }
         }
       }
     }
@@ -304,7 +342,7 @@ body {
   .react-info {
     .head {
       // background: #000;
-      
+
       font-size: 30px;
       line-height: px;
       color: #05b3bc;
@@ -339,16 +377,13 @@ body {
           height: 30%;
           display: flex;
           flex-direction: column;
-          h2{
+          h2 {
             letter-spacing: 3px;
           }
           .icons {
             // width: 3rem;
-            margin: 0rem 0.3rem 1rem .3rem;
-            margin
-
-
-            span {
+            margin: 0rem 0.3rem 1rem 0.3rem;
+            margin span {
               width: 10rem !important;
               // border-radius: 40px;
             }
@@ -434,8 +469,6 @@ body {
         // margin-bottom: 5rem;
         margin-bottom: 0.3rem;
         // background: #000;
-
-      
       }
       ul {
         width: 90%;
@@ -513,13 +546,11 @@ body {
         margin: 0.1rem;
         .left-card-header {
           margin: 2rem;
-          color:white;
-          
+          color: white;
         }
         .edu {
           margin: 1rem 1rem 0.1rem 1rem;
           display: flex;
-         
         }
 
         // Here it is
@@ -546,9 +577,9 @@ body {
               cursor: pointer;
 
               transition: transform ease 100ms;
-              
+
               &:hover {
-                transform:scale(1.3)
+                transform: scale(1.3);
               }
               &:hover i {
                 color: rgb(0, 255, 204);
@@ -606,17 +637,16 @@ body {
         }
       }
       .right-card {
-        padding:1rem
+        padding: 1rem;
       }
     }
   }
 
-
- .home_container {
-   .contact{
-     margin-bottom: 1rem;
-   }
- }
+  .home_container {
+    .contact {
+      margin-bottom: 1rem;
+    }
+  }
 
   // CONTACT SECTION ENDED
 
@@ -640,6 +670,11 @@ body {
   .disclaimer {
     color: rgb(148, 178, 190);
     text-align: center;
+    padding: 0rem 0.3rem;
+    span {
+      color: rgb(239, 60, 105);
+      font-size: 1.3rem;
+    }
   }
 
   .icons-row {
@@ -835,9 +870,10 @@ body {
   }
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
-
-  .mobile-nav{
-    display: flex!important;
+  .navbar {
+  }
+  .mobile-nav {
+    display: flex !important;
   }
   .home_container {
     margin: 0;
@@ -908,9 +944,9 @@ body {
 
   .react-info {
     .head {
-      span{
+      span {
         font-size: 1.1rem;
-        letter-spacing: 2px!important;
+        letter-spacing: 2px !important;
       }
     }
     ul li {
@@ -923,7 +959,7 @@ body {
         .tech-icons {
           text-align: center;
           // background: #000;
-          h2{
+          h2 {
             font-size: 1rem;
           }
         }
@@ -939,19 +975,101 @@ body {
       padding: 1rem;
     }
   }
+  .contact {
+    .cards-container {
+      .card {
+        .left-card-header {
+          margin: 0.4rem 1.5rem 0.4rem 1.5rem !important;
+          font-size: 1rem;
+        }
+        .edu {
+          // background: #000;
+          margin: 0rem 0 0 1rem !important;
+          padding: 0.3rem !important;
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4) {
+            margin-bottom: 0px !important;
+            padding-bottom: 0px !important;
+          }
+         
 
+          .icon {
+            // background: #000;
+          }
+          .content {
+            span {
+              padding: 0px !important;
+              margin: 0 !important;
+            }
+            .state {
+              margin: 0 !important;
+            }
+          }
+        
+        }
+
+        .icons-row{
+          // background: #000!important;
+          margin-top: 0px!important;
+          .icons{
+            background: #000;
+            width: 1.6rem!important;
+            height: 1.6rem!important;
+          }
+        }
+      }
+
+      .right-card{
+        padding:.5rem!important;
+        .header{
+          font-size: .7rem;
+          margin: 0.4rem 1.5rem 0.4rem 1.5rem !important;
+        }
+      }
+    }
+  }
   .about-card-wrapper {
     .left {
-      margin: 1rem .6rem;
+      margin: 1rem 0.6rem;
+      .heading {
+        font-size: 1rem;
+      }
       .content {
         height: auto;
         .row {
           width: 90%;
+          .details {
+            .year {
+              font-size: 1rem;
+            }
+            .name {
+              font-size: 1rem;
+            }
+            .location {
+              font-size: 1rem;
+            }
+          }
         }
       }
     }
     .right {
-      margin: 1rem .6rem;
+      margin: 1rem 0.6rem;
+      .heading {
+        font-size: 1rem;
+      }
+      .content {
+        padding: 5px !important;
+        margin-bottom: 6px !important;
+        .title {
+          .name {
+            font-size: 1rem;
+          }
+          .percent {
+            font-size: 1rem;
+          }
+        }
+      }
     }
   }
   .projects_page_container {
@@ -987,9 +1105,9 @@ body {
     }
   }
   .about_page_container {
-    .about{
-      .quote{
-        width:96%;
+    .about {
+      .quote {
+        width: 96%;
         font-size: 1rem;
       }
     }

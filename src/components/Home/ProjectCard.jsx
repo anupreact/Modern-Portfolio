@@ -1,13 +1,24 @@
 import React from "react";
 import banner from "../../images/banner.jpg";
 import banner2 from "../../images/Banner2.png";
+import project from "../../images/project.png";
 import { motion } from "framer-motion";
 import { cardAnimation } from "../Animations";
 import { useScroll } from "../useScroll";
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
   const [element, controls] = useScroll();
+  console.log(props)
 
+
+  const ProjectData = [
+    {
+      image :"",
+      title: "",
+      description:"",
+      url:""
+    }
+  ]
   return (
     <motion.div
     ref={element}
@@ -19,21 +30,25 @@ const ProjectCard = () => {
     >
       <div className="image-box">
         {/* <img src={banner} alt="" /> */}
-        <img src={banner2} alt="" />
+        <img src={props.data.image} alt="" />
       </div>
       <div className="title">
-        <span> Type : Ecommerce</span>
+        <span> Type : {props.data.title}</span>
       </div>
       <div className="description">
-        Stack Used : React, Redux, Scss, Antd, React-router-dom, Json-server
+        <span> Stack Used :</span>
+        <span> {props.data.description}</span>
+       
       </div>
       <div className="visit">
         <a
           style={{ color: "white" }}
-          href="https://cakes-fantasy.web.app/"
+          href={props.data.url}
           target="_blank"
+          rel="noreferrer"
         >
-          View Project
+          <button>View Project <span style={{fontSize:"1.5rem", }}> &#8594;</span></button>
+          {/* View Project */}
         </a>
       </div>
     </motion.div>
