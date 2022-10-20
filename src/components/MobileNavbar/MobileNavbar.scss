@@ -1,5 +1,5 @@
 .mobile-nav {
-  margin-top: 5rem;
+  margin-top: 1rem;
   background: none;
   display: flex;
   display: none;
@@ -7,20 +7,26 @@
   position: sticky;
   bottom: 0;
   opacity: 1;
+  z-index: 1;
+  background-color: #0a3947 !important;
+
+  -webkit-box-shadow: -1px -2px 5px -1px rgb(157, 157, 157);
+  -moz-box-shadow: -1px -2px 5px -1px rgb(157, 157, 157);
+  box-shadow: -1px -2px 5px -1px rgb(157, 157, 157);
   .wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 1.4rem;
-    width: 90%;
-    margin: 0.4rem 0rem 0rem 0rem;
-    padding: 0.4rem 0rem;
+    width: 80%;
+    // margin: 0.4rem 0rem 0rem 0rem;
+    // padding: 0.4rem 0rem;
     border-radius: 20px;
     // border-top-left-radius: 15px;
     // border-top-right-radius: 15px;
-    background: linear-gradient(145deg, #093340, #0b3d4c);
+    // background: linear-gradient(145deg, #093340, #0b3d4c);
 
-    box-shadow: inset 3px 3px 4px 0 rgba(0, 0, 0, 0.2),
-      inset -2px -2px 3px 0 rgba(255, 255, 255, 0.2);
+    // box-shadow: inset 3px 3px 4px 0 rgba(0, 0, 0, 0.2),
+    //   inset -2px -2px 3px 0 rgba(255, 255, 255, 0.2);
 
     // background: none;
     // box-shadow:none

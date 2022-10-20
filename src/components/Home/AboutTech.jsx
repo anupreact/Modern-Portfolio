@@ -17,16 +17,53 @@ import {
   topContainerAnimation,
   videoAnimation,
 } from "../Animations";
+import { Tooltip } from "antd";
 
 const AboutTech = () => {
   const [element, controls] = useScroll();
   const images = [
-    `${html}`,
-    `${css}`,
-    `${js}`,
-    `${react}`,
-    `${sass}`,
-    `${mui}`,
+    {
+      img:html,
+      tip:"HTML"
+    }, {
+      img:css,
+      tip:"CSS"
+    }, {
+      img:js,
+      tip:"JAVASCRIPT"
+    }, {
+      img:react,
+      tip:"REACT"
+    },
+     {
+      img:sass,
+      tip:"SCSS"
+    }, 
+    {
+      img:mui,
+      tip:"Material UI"
+    }
+    // `${html}`,
+    // `${css}`,
+    // `${js}`,
+    // `${react}`,
+    // `${sass}`,
+    // `${mui}`,
+  ];
+  const colors = [
+    'pink',
+    'red',
+    'yellow',
+    'orange',
+    'cyan',
+    'green',
+    'blue',
+    'purple',
+    'geekblue',
+    'magenta',
+    'volcano',
+    'gold',
+    'lime',
   ];
 
   const techData = [
@@ -67,9 +104,11 @@ const AboutTech = () => {
             <div className="icons">
               {images.map((image, index) => {
                 return (
-                  <span key={index}>
-                    <img src={image} alt="" />
+                  <Tooltip title={image.tip} placement="bottom"  key={index} color="orange">
+                  <span >
+                    <img src={image.img} alt="" />
                   </span>
+                  </Tooltip>
                 );
               })}
             </div>

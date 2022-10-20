@@ -14,6 +14,7 @@ a{
   top: 0;
   z-index: 20;
   box-shadow: 0 2px 2px -2px rgb(43, 117, 164);
+  /* border: 1px solid yellow; */
 }
 .nav-container {
   display: flex;
@@ -41,6 +42,8 @@ a{
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
+  text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+
   /* flex-grow: 1; */
 
   font-family: 'Great Vibes', cursive;
@@ -67,6 +70,8 @@ a{
   height: 100%;
   /* border-bottom: 3px solid transparent; */
   border-radius: 10px;
+  text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+
  
 }
 .nav-links:hover{
@@ -104,19 +109,25 @@ a{
 }
 
 @media screen and (max-width: 960px) {
+  .navbar {
+    height: 50px !important;
+  }
   .nav-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
     /* border-top: 1px solid #fff; */
     position: absolute;
-    top: 46px;
+    top: 17px;
     left: -110%;
     opacity: 1;
     transition: all 0.5s ease;
     height: 240px;
+    /* background: #000!important; */
   }
-
+  .nav-logo{
+    font-size: 1.3rem;
+  }
   .nav-menu.active {
     background: #1f5156;
   background-color: #0a3947;
@@ -139,11 +150,16 @@ a{
   .nav-icon {
     display: block;
     position: absolute;
-    top: -9px;
+    top: -23px;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
     color: #ffdd40;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .nav-icon{
+    display: none!important;
   }
 }

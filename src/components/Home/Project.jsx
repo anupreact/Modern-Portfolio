@@ -43,8 +43,8 @@ const Project = (props) => {
       <div className="cards-container">
 
         {
-          ProjectData.map((data)=>{
-            return <ProjectCard data={data}/>
+          ProjectData.map((data,index)=>{
+            return <ProjectCard key={index} data={data}/>
 
           })
         }

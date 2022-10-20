@@ -26,7 +26,7 @@ function Navbar() {
           </motion.div>
 
           <motion.ul
-            initial={{ x: 800 }}
+            initial={{ x: 0 }}
             animate={{ x: 0 }}
             transition={{ delay: 0.4 , duration:1 }}
             className={click ? "nav-menu active" : "nav-menu"}

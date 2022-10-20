@@ -13,9 +13,13 @@ import NotFound from './screens/NotFound';
 import MobileNavbar from './components/MobileNavbar/MobileNavbar';
 
 function App() {
+
+  
+
   return (
 
     <>
+     
     
     <BrowserRouter>
       <Navbar />

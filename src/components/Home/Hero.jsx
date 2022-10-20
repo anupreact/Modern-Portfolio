@@ -21,8 +21,8 @@ const icons = [
     link: "https://www.linkedin.com/in/iamanup17",
   },
   {
-    icon: "fa fa-google",
-    link: "https://www.gmail.com/anupmanwatkar",
+    icon: "fa fa-skype",
+    link: "https://join.skype.com/invite/x6hEOBuO7Lpm",
   },
   {
     icon: "fa fa-facebook",

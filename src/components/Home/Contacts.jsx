@@ -94,8 +94,8 @@ const Contacts = (props) => {
       link: "https://www.linkedin.com/in/iamanup17",
     },
     {
-      icon: "fa fa-google",
-      link: "https://www.gmail.com/anupmanwatkar",
+      icon: "fa fa-skype",
+      link: "https://join.skype.com/invite/x6hEOBuO7Lpm",
     },
     {
       icon: "fa fa-facebook",
@@ -140,10 +140,10 @@ const Contacts = (props) => {
             transition={{ delay: 0, duration: 0.4 }}
           >
             I am available on almost every social media. You can message me,{" "}
-            <br />
+           <br />
             I will reply within 24 hours. I can help you with Single Page
-            Applications using React JS, <br />
-            Javascript , & various Technial aspects of Frontend Web development.
+            Applications using React JS, 
+            Javascript, & various Technial aspects of Frontend Web development.
           </motion.span>
         </div>
       )}

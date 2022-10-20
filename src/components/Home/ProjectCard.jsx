@@ -8,20 +8,11 @@ import { useScroll } from "../useScroll";
 
 const ProjectCard = (props) => {
   const [element, controls] = useScroll();
-  console.log(props)
 
-
-  const ProjectData = [
-    {
-      image :"",
-      title: "",
-      description:"",
-      url:""
-    }
-  ]
+ 
   return (
     <motion.div
-    ref={element}
+      ref={element}
       variants={cardAnimation}
       initial={{ opacity: 0 }}
       animate={controls}
@@ -33,12 +24,12 @@ const ProjectCard = (props) => {
         <img src={props.data.image} alt="" />
       </div>
       <div className="title">
-        <span> Type : {props.data.title}</span>
+        <span> Type :</span> 
+        <span> {props.data.title}</span>
       </div>
       <div className="description">
         <span> Stack Used :</span>
         <span> {props.data.description}</span>
-       
       </div>
       <div className="visit">
         <a
@@ -47,7 +38,9 @@ const ProjectCard = (props) => {
           target="_blank"
           rel="noreferrer"
         >
-          <button>View Project <span style={{fontSize:"1.5rem", }}> &#8594;</span></button>
+          <button>
+            View  <span style={{ fontSize: "1.5rem" }}> &#8594;</span>
+          </button>
           {/* View Project */}
         </a>
       </div>
