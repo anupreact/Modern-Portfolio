@@ -11,16 +11,34 @@ import Projects from './screens/Projects';
 import { motion } from "framer-motion";
 import NotFound from './screens/NotFound';
 import MobileNavbar from './components/MobileNavbar/MobileNavbar';
+import { useEffect, useState } from 'react';
+import astr from "./images/astronaut-in-tea-break.gif"
 
 function App() {
+  const [load, setLoad] = useState(true)
 
+  useEffect(() => {
+   setTimeout(() => {
+     setLoad(false)
+   }, 3000);
+  }, [])
   
 
   return (
 
     <>
+
+    {
+       load && (
+        <div className="loading-screen">
+        <img src={astr} alt="" />
+        <h2>Thank you </h2>
+      </div> 
+       )
+    }
      
-    
+    {
+      !load && (
     <BrowserRouter>
       <Navbar />
       <ScrollToTop />
@@ -37,6 +55,9 @@ function App() {
       <Footer />
       <MobileNavbar/>
     </BrowserRouter>
+
+      )
+    }
     </>
   );
 }

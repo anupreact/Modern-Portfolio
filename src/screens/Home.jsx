@@ -11,23 +11,29 @@ import { useEffect, useState } from "react";
 import { Button, Result } from "antd";
 import { NavLink } from "react-router-dom";
 
+// import loadi from "../images/loader1.gif"
+// import astr from "../images/astronaut-in-tea-break.gif"
+
 
 const Home = () => {
-  const [load, setLoad] = useState(true);
+  // const [load, setLoad] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoad(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoad(false);
+  //   }, 2000);
+  // }, []);
 
   const [element, controls] = useScroll();
 
   return (
     <>
-      {load ? (
-          "Loader"
-      ) : (
+      {/* {load ? (
+          <div className="loading-screen">
+            <img src={astr} alt="" />
+          </div> 
+
+      ) : ( */}
         <main className="home_container" ref={element}>
           {/* HERO SECTION STARTED */}
           <Hero />
@@ -47,7 +53,7 @@ const Home = () => {
           <Contacts heading={true} />
           {/* // CONTACT SECTION ENDED */}
         </main>
-      )}
+      {/* )} */}
     </>
   );
 };
