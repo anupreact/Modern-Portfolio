@@ -14,6 +14,7 @@ import MobileNavbar from './components/MobileNavbar/MobileNavbar';
 import { useEffect, useState } from 'react';
 import astr from "./images/astronaut-in-tea-break.gif"
 import loader2 from "./images/loader2.gif"
+import loader3 from "./images/loader003.gif"
 
 function App() {
   const [load, setLoad] = useState(true)
@@ -32,8 +33,8 @@ function App() {
     {
        load && (
         <div className="loading-screen">
-        <img src={loader2} alt="" />
-        <h2>Thank you </h2>
+        <img src={loader3} alt="" />
+        {/* <h2>Thank you </h2> */}
       </div> 
        )
     }

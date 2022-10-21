@@ -70,8 +70,7 @@ a{
   height: 100%;
   /* border-bottom: 3px solid transparent; */
   border-radius: 10px;
-  text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
-
+  text-shadow: 0px 2.1px 2px rgba(0,0,0,0.6);
  
 }
 .nav-links:hover{
@@ -126,7 +125,7 @@ a{
     /* background: #000!important; */
   }
   .nav-logo{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   .nav-menu.active {
     background: #1f5156;
@@ -160,6 +159,8 @@ a{
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
   .nav-icon{
-    display: none!important;
+    /* display: none!important; */
+    font-size: 1.3rem;
+    top:-10px;
   }
 }

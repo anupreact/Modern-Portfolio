@@ -6,6 +6,8 @@ import banner_3d from "../../images/banner3d.png";
 import AboutTech from "./AboutTech";
 import { Typewriter } from "react-simple-typewriter";
 import { motion, useScroll } from "framer-motion";
+import { Button } from "antd";
+import file from "../../images/Resume_New_Updated.pdf";
 
 const name = "Anup Manwatkar,";
 const title = "Frontend React-Js Developer.";
@@ -37,6 +39,22 @@ const icons = [
     link: "https://github.com/iamanup17?tab=repositories",
   },
 ];
+
+// download File
+const onButtonClick = () => {
+  // using Java Script method to get PDF file
+  fetch("../../images/Anup-ReactJS-4y-4.pdf").then((response) => {
+    response.blob().then((blob) => {
+      // Creating new object of PDF file
+      const fileURL = window.URL.createObjectURL(blob);
+      // Setting various property values
+      let alink = document.createElement("a");
+      alink.href = fileURL;
+      alink.download = "sample.pdf";
+      alink.click();
+    });
+  });
+};
 
 const Hero = () => {
   // const [element, controls] = useScroll();
@@ -92,13 +110,12 @@ const Hero = () => {
 
         <div className="content-row4">
           <div className="download-btn">
-            <a href="/src/images/Resume_New_Updated.pdf" download>
+            <a href={file} download>
               <button>Download CV</button>
             </a>
           </div>
         </div>
       </motion.div>
-
       <motion.div
         className="right-col"
         initial={{ opacity: 0, scale: 1.8 }}

@@ -12,7 +12,7 @@
 
   -webkit-box-shadow: -1px -2px 5px -1px rgb(157, 157, 157);
   -moz-box-shadow: -1px -2px 5px -1px rgb(157, 157, 157);
-  box-shadow: -1px -2px 5px -1px rgb(157, 157, 157);
+  box-shadow: -1px 2px 5px -1px rgb(157, 157, 157);
   .wrapper {
     display: flex;
     justify-content: space-evenly;
@@ -67,7 +67,7 @@
     }
     .name {
       color: white;
-      font-size: 10px;
+      font-size: 12px;
     }
 
     .active {

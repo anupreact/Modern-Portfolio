@@ -14,6 +14,8 @@
 
 body {
   background-color: #0a3947 !important;
+  // background: rgb(255, 255, 255)!important;
+
   color: #000 !important;
 }
 
@@ -29,8 +31,8 @@ body {
     height: 100%;
     object-fit: contain;
   }
-  h2{
-    color:white
+  h2 {
+    color: white;
   }
 }
 
@@ -227,7 +229,9 @@ body {
         margin: 0.6rem;
         border-radius: 5px;
         background: linear-gradient(145deg, #093340, #0b3d4c);
+        // background: linear-gradient(145deg, #17373d, #0d4658);
         box-shadow: 8px 8px 16px #082c37, -1px -1px 16px #0c4657;
+        // background: rgb(147, 253, 255);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -446,14 +450,14 @@ body {
           // text-align: center;
           li {
             line-height: 1.3;
-            color: rgb(0, 255, 238);
+            color: #ccf8ff;
             font-family: "Saira Condensed", sans-serif;
             font-size: 1.45rem;
             letter-spacing: 0.06rem;
             list-style-type: none;
             margin: 0.4rem;
             font-weight: 400;
-            text-shadow: 4px 4px 2px rgb(30, 30, 30);
+            // text-shadow: 4px 4px 2px rgb(205, 62, 62);
           }
         }
       }
@@ -872,6 +876,8 @@ body {
           rgba(73, 174, 255, 1) 0%,
           rgba(124, 0, 61, 0.7651435574229692) 92%
         ) !important;
+        background: rgb(63,228,251)!important;
+        background: linear-gradient(90deg, rgba(63,228,251,1) 0%, rgba(54,150,238,1) 58%, rgba(48,245,196,1) 100%)!important;
       }
       .ant-progress-inner {
         border-radius: 200px !important;
