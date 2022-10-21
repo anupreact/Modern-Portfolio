@@ -42,6 +42,32 @@ body {
   font-size: 3.5rem;
   // margin-top: 10%;
 }
+
+.Error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 80vh;
+  .error {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+    }
+  }
+  span{
+    color:white;
+    font-size: 1.2rem;
+  }
+}
+
 .home_container {
   // background: #000;
 }
@@ -876,8 +902,13 @@ body {
           rgba(73, 174, 255, 1) 0%,
           rgba(124, 0, 61, 0.7651435574229692) 92%
         ) !important;
-        background: rgb(63,228,251)!important;
-        background: linear-gradient(90deg, rgba(63,228,251,1) 0%, rgba(54,150,238,1) 58%, rgba(48,245,196,1) 100%)!important;
+        background: rgb(63, 228, 251) !important;
+        background: linear-gradient(
+          90deg,
+          rgba(63, 228, 251, 1) 0%,
+          rgba(54, 150, 238, 1) 58%,
+          rgba(48, 245, 196, 1) 100%
+        ) !important;
       }
       .ant-progress-inner {
         border-radius: 200px !important;
