@@ -11,7 +11,7 @@ const NotFound = () => {
       </div>
       <span>404</span> <br />
       <span>
-        Sorry The Page you are trying to Access is either unavailable or nit
+        Sorry The Page you are trying to Access is either unavailable or not
         found
       </span>
       <NavLink to="/">
