@@ -21,7 +21,7 @@ const Contacts = (props) => {
   const [state, setState] = useState({
     name: "",
     email: "",
-    message: "",
+    messages: "",
   });
 
   const { name, email, messages } = state;
@@ -63,10 +63,10 @@ const Contacts = (props) => {
       };
       emailjs
         .send(
-          "service_wn68p1a",
-          "template_vq1q3ok",
+          "service_d8o9lqj",
+          "template_feni72i",
           templateParams,
-          "ALSqlnGCMmLwFsfGy"
+          "qLCfY0N1R9qzeDIEQ"
         )
         .then(
           (response) => {
@@ -79,7 +79,7 @@ const Contacts = (props) => {
       setTimeout(() => {
         setState({
           name: "",
-          email: "", 
+          email: "",
           messages: "",
         });
       }, 2000);
@@ -140,10 +140,9 @@ const Contacts = (props) => {
             transition={{ delay: 0, duration: 0.4 }}
           >
             I am available on almost every social media. You can message me,{" "}
-           <br />
-            I will reply within 24 hours. I can help you with Single Page
-            Applications using React JS, 
-            Javascript, & various Technial aspects of Frontend Web development.
+            <br />I will reply within 24 hours. I can help you with Single Page
+            Applications using React JS, Javascript, & various Technial aspects
+            of Frontend Web development.
           </motion.span>
         </div>
       )}
@@ -286,7 +285,7 @@ const Contacts = (props) => {
                 col="6"
                 type="text"
                 placeholder="Your Message"
-                name="message"
+                name="messages"
                 value={messages}
                 onChange={(e) => {
                   handleChange(e);
