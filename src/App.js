@@ -34,7 +34,6 @@ function App() {
        load && (
         <div className="loading-screen">
         <img src={loader3} alt="" />
-        {/* <h2>Thank you </h2> */}
       </div> 
        )
     }

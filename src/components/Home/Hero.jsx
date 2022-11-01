@@ -8,6 +8,8 @@ import { Typewriter } from "react-simple-typewriter";
 import { motion, useScroll } from "framer-motion";
 import { Button } from "antd";
 import file from "../../images/Resume_New_Updated.pdf";
+import Resume from "../../images/Resume-31October.pdf";
+
 
 const name = "Anup Manwatkar,";
 const title = "Frontend React-Js Developer.";
@@ -110,7 +112,7 @@ const Hero = () => {
 
         <div className="content-row4">
           <div className="download-btn">
-            <a href={file} download>
+            <a href={Resume} download>
               <button>Download CV</button>
             </a>
           </div>
