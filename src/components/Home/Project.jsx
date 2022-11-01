@@ -6,6 +6,7 @@ import { useScroll } from "../useScroll";
 
 import cake from "../../images/project.png";
 import task from "../../images/task002.jpg";
+import ecomshop from "../../images/Ecom-shop.png";
 
 const Project = (props) => {
   const [element, controls] = useScroll();
@@ -25,11 +26,11 @@ const Project = (props) => {
       url: "https://react-task-managerr.herokuapp.com/",
     },
     {
-      image: cake,
+      image: ecomshop,
       title: "E-commerce",
       description:
-        "React, react-router-dom, Redux, antDesign, Email JS, json-server, React Hooks, React-Toastify, Framer-Motion, Heroku.",
-      url: "https://cakes-fantasy.web.app",
+        "React, react-router-dom, Redux, antDesign, json-server, React Hooks, React-Toastify, react-slick, Framer-Motion.",
+      url: "https://github.com/anupreact/Ecommerce-Shop",
     },
   ];
 
