@@ -13,3 +13,16 @@ export const useScroll = (thresh = 0.09) => {
 
   return [element, controls];
 };
+
+export const useScroll2 = (thresh = 0.09) => {
+  const controls2 = useAnimation();
+  const [element2, view2] = useInView({ threshold: thresh });
+
+  if (view2) {
+    controls2.start("show");
+  } else {
+    controls2.start("hidden");
+  }
+
+  return [element2, controls2];
+};

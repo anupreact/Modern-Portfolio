@@ -7,6 +7,7 @@ import { useScroll } from "../useScroll";
 import cake from "../../images/project.png";
 import task from "../../images/task002.jpg";
 import ecomshop from "../../images/Ecom-shop.png";
+import project04 from "../../images/p04.png";
 
 const Project = (props) => {
   const [element, controls] = useScroll();
@@ -31,6 +32,12 @@ const Project = (props) => {
       description:
         "React, react-router-dom, Redux, antDesign, json-server, React Hooks, React-Toastify, react-slick, Framer-Motion.",
       url: "https://github.com/anupreact/Ecommerce-Shop",
+    },
+    {
+      image: project04,
+      title: "E-commerce (in progress).",
+      description: "React, react-router-dom, json-server, React Hooks, react-slick, netlify hosting service .",
+      url: "https://anandelectricals.netlify.app/",
     },
   ];
 
